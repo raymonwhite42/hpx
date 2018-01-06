@@ -14,6 +14,7 @@
 #include <cstring>
 #include <string>
 
+#include <windows.h> // this must go before psapi.h
 #include <psapi.h>
 
 namespace hpx { namespace performance_counters { namespace memory
