@@ -85,11 +85,11 @@ void primary_namespace::register_counter_types(
         if (detail::primary_namespace_services[i].target_
             == detail::counter_target_count)
             help = hpx::util::format(
-                "returns the number of invocations of the AGAS service '%s'",
+                "returns the number of invocations of the AGAS service '{:s}'",
                 name.substr(p+1));
         else
             help = hpx::util::format(
-                "returns the overall execution time of the AGAS service '%s'",
+                "returns the overall execution time of the AGAS service '{:s}'",
                 name.substr(p+1));
 
         performance_counters::install_counter_type(

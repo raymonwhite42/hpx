@@ -183,7 +183,7 @@ namespace hpx { namespace detail
               << '\n';
 
         strm << "version:  ";        // 0xMMmmrrrr
-        hpx::util::format_to(strm, "%d.%d.%d\n",
+        hpx::util::format_to(strm, "{:d}.{:d}.{:d}\n",
             info.version_ / 0x1000000,
             info.version_ / 0x10000 % 0x100,
             info.version_ % 0x10000);
@@ -252,7 +252,7 @@ namespace hpx { namespace detail
     void list_component_type(std::string const& name,
         components::component_type ctype)
     {
-        print(hpx::util::format("{1}, %|40t|{2}",
+        print(hpx::util::format("{1}, {2:|40t}",
             name, components::get_component_type_name(ctype)));
     }
 

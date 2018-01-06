@@ -59,7 +59,7 @@ namespace hpx
 
     std::string full_version_as_string()
     {
-        return hpx::util::format("%d.%d.%d", //-V609
+        return hpx::util::format("{:d}.{:d}.{:d}", //-V609
             HPX_VERSION_MAJOR,
             HPX_VERSION_MINOR,
             HPX_VERSION_SUBMINOR);
@@ -186,7 +186,7 @@ namespace hpx
 
     std::string build_string()
     {
-        return hpx::util::format("V%s%s (AGAS: V%d.%d), Git: %.10s", //-V609
+        return hpx::util::format("V{:s}{:s} (AGAS: V{:d}.{:d}), Git: {:.10s}", //-V609
             full_version_as_string(), HPX_VERSION_TAG,
             HPX_AGAS_VERSION / 0x10, HPX_AGAS_VERSION % 0x10,
             HPX_HAVE_GIT_COMMIT);
@@ -195,7 +195,7 @@ namespace hpx
     std::string boost_version()
     {
         // BOOST_VERSION: 105700
-        return hpx::util::format("V%d.%d.%d",
+        return hpx::util::format("V{:d}.{:d}.{:d}",
             BOOST_VERSION / 100000,
             BOOST_VERSION / 100 % 1000,
             BOOST_VERSION % 100);
@@ -205,7 +205,7 @@ namespace hpx
     std::string hwloc_version()
     {
         // HWLOC_API_VERSION: 0x00010700
-        return hpx::util::format("V%d.%d.%d",
+        return hpx::util::format("V{:d}.{:d}.{:d}",
             HWLOC_API_VERSION / 0x10000,
             HWLOC_API_VERSION / 0x100 % 0x100,
             HWLOC_API_VERSION % 0x100);
@@ -238,21 +238,21 @@ namespace hpx
     {
         std::string version = hpx::util::format(
             "Versions:\n"
-            "  HPX: %s\n"
-            "  Boost: %s\n"
+            "  HPX: {:s}\n"
+            "  Boost: {:s}\n"
 #if defined(HPX_HAVE_HWLOC)
-            "  Hwloc: %s\n"
+            "  Hwloc: {:s}\n"
 #endif
 #if defined(HPX_HAVE_PARCELPORT_MPI)
-            "  MPI: %s\n"
+            "  MPI: {:s}\n"
 #endif
             "\n"
             "Build:\n"
-            "  Type: %s\n"
-            "  Date: %s\n"
-            "  Platform: %s\n"
-            "  Compiler: %s\n"
-            "  Standard Library: %s\n",
+            "  Type: {:s}\n"
+            "  Date: {:s}\n"
+            "  Platform: {:s}\n"
+            "  Compiler: {:s}\n"
+            "  Standard Library: {:s}\n",
             build_string(),
             boost_version(),
 #if defined(HPX_HAVE_HWLOC)

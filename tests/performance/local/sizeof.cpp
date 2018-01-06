@@ -29,7 +29,7 @@ int hpx_main(
 {
     {
 #       define HPX_SIZEOF(type)                                               \
-            hpx::util::format("{1} %|40t|{2}\n",                              \
+            hpx::util::format("{1} {2:|40t}\n",                               \
                 HPX_PP_STRINGIZE(type), sizeof(type))                         \
             /**/
 

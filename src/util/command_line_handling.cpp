@@ -534,7 +534,7 @@ namespace hpx { namespace util
 
                 // raise hard error if node file could not be opened
                 throw hpx::detail::command_line_error(hpx::util::format(
-                    "Could not open nodefile: '%s'", node_file));
+                    "Could not open nodefile: '{:s}'", node_file));
             }
         }
         else if (vm.count("hpx:nodes")) {
