@@ -373,7 +373,7 @@ namespace hpx { namespace threads { namespace detail
         default:
             HPX_THROWS_IF(ec, bad_parameter, "extract_socket_or_numanode_mask",
                 hpx::util::format(
-                    "unexpected specification type {:s}",
+                    "unexpected specification type {}",
                     spec_type::type_name(s.type_)));
             break;
         }
@@ -445,7 +445,7 @@ namespace hpx { namespace threads { namespace detail
         default:
             HPX_THROWS_IF(ec, bad_parameter, "extract_core_mask",
                 hpx::util::format(
-                    "unexpected specification type {:s}",
+                    "unexpected specification type {}",
                     spec_type::type_name(s.type_)));
             break;
         }
@@ -531,7 +531,7 @@ namespace hpx { namespace threads { namespace detail
         default:
             HPX_THROWS_IF(ec, bad_parameter, "extract_pu_mask",
                 hpx::util::format(
-                    "unexpected specification type {:s}",
+                    "unexpected specification type {}",
                     spec_type::type_name(s.type_)));
             break;
         }

@@ -114,7 +114,7 @@ void print_results(
         ;
 */
 
-    hpx::util::format_to(cout, "{:lu} {:lu} {:lu} {:lu} {:lu} {:.14g}",
+    hpx::util::format_to(cout, "{} {} {} {} {} {:.14g}",
         payload,
         os_thread_count,
         contexts,

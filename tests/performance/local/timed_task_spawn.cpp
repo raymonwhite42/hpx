@@ -148,7 +148,7 @@ void print_results(
     }
 
     hpx::util::format_to(cout,
-        "{:lu}, {:lu}, {:lu}, {:lu}, {:.14g}, {:.14g}",
+        "{}, {}, {}, {}, {:.14g}, {:.14g}",
         delay,
         tasks,
         suspended_tasks,

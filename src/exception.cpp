@@ -209,7 +209,7 @@ namespace hpx { namespace detail
 
         std::sort(env.begin(), env.end());
 
-        std::string retval = hpx::util::format("{:d} entries:\n", env.size());
+        std::string retval = hpx::util::format("{} entries:\n", env.size());
         for (std::string const& s : env)
         {
             retval += "  " + s + "\n";

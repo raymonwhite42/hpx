@@ -407,7 +407,7 @@ namespace hpx { namespace threads
                       , "hpx::threads::hwloc_topology_info::set_thread_affinity_mask"
                       , hpx::util::format(
                             "failed to set thread affinity mask ("
-                            HPX_CPU_MASK_PREFIX "{:x}) for cpuset {:s}",
+                            HPX_CPU_MASK_PREFIX "{:x}) for cpuset {}",
                             mask, buffer.get()));
                     return;
                 }

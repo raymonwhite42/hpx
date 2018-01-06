@@ -183,7 +183,7 @@ namespace hpx { namespace detail
               << '\n';
 
         strm << "version:  ";        // 0xMMmmrrrr
-        hpx::util::format_to(strm, "{:d}.{:d}.{:d}\n",
+        hpx::util::format_to(strm, "{}.{}.{}\n",
             info.version_ / 0x1000000,
             info.version_ / 0x10000 % 0x100,
             info.version_ % 0x10000);
