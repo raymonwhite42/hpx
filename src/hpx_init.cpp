@@ -252,7 +252,7 @@ namespace hpx { namespace detail
     void list_component_type(std::string const& name,
         components::component_type ctype)
     {
-        print(hpx::util::format("%1%, %|40t|%2%",
+        print(hpx::util::format("{1}, %|40t|{2}",
             name, components::get_component_type_name(ctype)));
     }
 

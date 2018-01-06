@@ -599,7 +599,7 @@ void notify_worker(notification_header const& header)
     agas_client.set_local_locality(header.prefix);
     agas_client.register_console(header.agas_endpoints);
     cfg.parse("assigned locality",
-        hpx::util::format("hpx.locality!=%1%",
+        hpx::util::format("hpx.locality!={1}",
             naming::get_locality_id_from_gid(header.prefix)));
 
     // store the full addresses of the agas servers in our local service

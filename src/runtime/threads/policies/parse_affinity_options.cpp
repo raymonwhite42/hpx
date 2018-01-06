@@ -556,7 +556,7 @@ namespace hpx { namespace threads { namespace detail
         {
             HPX_THROWS_IF(ec, bad_parameter, "decode_mapping",
                 hpx::util::format(
-                    "no %1% mapping bounds are specified",
+                    "no {1} mapping bounds are specified",
                     spec_type::type_name(fmt.first.type_)));
             return;
         }
@@ -739,7 +739,7 @@ namespace hpx { namespace threads { namespace detail
                         HPX_THROWS_IF(ec, bad_parameter,
                             "decode_compact_distribution",
                             hpx::util::format(
-                                "affinity mask for thread %1% has "
+                                "affinity mask for thread {1} has "
                                 "already been set",
                                 num_thread));
                         return;
@@ -775,7 +775,7 @@ namespace hpx { namespace threads { namespace detail
                     HPX_THROWS_IF(ec, bad_parameter,
                         "decode_scatter_distribution",
                         hpx::util::format(
-                            "affinity mask for thread %1% has "
+                            "affinity mask for thread {1} has "
                             "already been set",
                             num_thread));
                     return;
@@ -829,7 +829,7 @@ namespace hpx { namespace threads { namespace detail
                     HPX_THROWS_IF(ec, bad_parameter,
                         "decode_balanced_distribution",
                         hpx::util::format(
-                            "affinity mask for thread %1% has "
+                            "affinity mask for thread {1} has "
                             "already been set",
                             num_thread));
                     return;
@@ -909,7 +909,7 @@ namespace hpx { namespace threads { namespace detail
                         HPX_THROWS_IF(ec, bad_parameter,
                             "decode_numabalanced_distribution",
                             hpx::util::format(
-                                "affinity mask for thread %1% has "
+                                "affinity mask for thread {1} has "
                                 "already been set",
                                 num_thread));
                         return;
@@ -999,7 +999,7 @@ namespace hpx { namespace threads
                         HPX_THROWS_IF(ec, bad_parameter,
                             "parse_affinity_options",
                             hpx::util::format(
-                                "bind specification (%1%) is ill formatted",
+                                "bind specification ({1}) is ill formatted",
                                 spec));
                         return;
                     }
@@ -1009,7 +1009,7 @@ namespace hpx { namespace threads
                         HPX_THROWS_IF(ec, bad_parameter,
                             "parse_affinity_options",
                             hpx::util::format(
-                                "bind specification (%1%) is ill formatted",
+                                "bind specification ({1}) is ill formatted",
                                 spec));
                         return;
                     }
@@ -1021,7 +1021,7 @@ namespace hpx { namespace threads
                         HPX_THROWS_IF(ec, bad_parameter,
                             "parse_affinity_options",
                             hpx::util::format(
-                                "bind specification (%1%) is ill formatted",
+                                "bind specification ({1}) is ill formatted",
                                 spec));
                         return;
                     }

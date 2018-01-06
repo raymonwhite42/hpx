@@ -290,7 +290,7 @@ namespace hpx { namespace threads
         HPX_THROWS_IF(ec, bad_parameter
           , "hpx::threads::hwloc_topology_info::get_socket_affinity_mask"
           , hpx::util::format(
-                "thread number %1% is out of range",
+                "thread number {1} is out of range",
                 num_thread));
         return empty_mask;
     } // }}}
@@ -313,7 +313,7 @@ namespace hpx { namespace threads
         HPX_THROWS_IF(ec, bad_parameter
           , "hpx::threads::hwloc_topology_info::get_numa_node_affinity_mask"
           , hpx::util::format(
-                "thread number %1% is out of range",
+                "thread number {1} is out of range",
                 num_thread));
         return empty_mask;
     } // }}}
@@ -336,7 +336,7 @@ namespace hpx { namespace threads
         HPX_THROWS_IF(ec, bad_parameter
           , "hpx::threads::hwloc_topology_info::get_core_affinity_mask"
           , hpx::util::format(
-                "thread number %1% is out of range",
+                "thread number {1} is out of range",
                 num_thread));
         return empty_mask;
     }
@@ -359,7 +359,7 @@ namespace hpx { namespace threads
         HPX_THROWS_IF(ec, bad_parameter
           , "hpx::threads::hwloc_topology_info::get_thread_affinity_mask"
           , hpx::util::format(
-                "thread number %1% is out of range",
+                "thread number {1} is out of range",
                 num_thread));
         return empty_mask;
     } // }}}
