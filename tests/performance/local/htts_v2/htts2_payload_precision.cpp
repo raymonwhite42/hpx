@@ -5,10 +5,14 @@
 //
 //  Distributed under the Boost Software License, Version 1.0. (See accompanying
 //  file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+
+// hpxinspect:nodeprecatedinclude:boost/format.hpp
+// hpxinspect:nodeprecatedname:boost::format
 #define HPX_NO_VERSION_CHECK
 
 #include "htts2.hpp"
-#include <hpx/util/format.hpp>
+
+#include <boost/format.hpp>
 
 #include <chrono>
 #include <cstdint>
@@ -181,16 +185,17 @@ struct payload_precision_driver : htts2::driver
                 << "Amortized Overhead per Task Uncertainty [nanoseconds/task]"
                 << "\n";
 
-        hpx::util::format_to(std::cout,
-            "{},{},{},{:.14g},{:.14g},{:.14g},{:.14g}\n",
-            this->osthreads_,
-            this->tasks_,
-            this->payload_duration_,
-            results.average_precision_,
-            results.precision_uncertainty_,
-            results.amortized_overhead_,
-            results.overhead_uncertainty_
-        );
+        std::cout
+            << ( boost::format("%lu,%lu,%lu,%.14g,%.14g,%.14g,%.14g\n")
+               % this->osthreads_
+               % this->tasks_
+               % this->payload_duration_
+               % results.average_precision_
+               % results.precision_uncertainty_
+               % results.amortized_overhead_
+               % results.overhead_uncertainty_
+               )
+            ;
     }
 };
 

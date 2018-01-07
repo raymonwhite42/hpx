@@ -6,8 +6,12 @@
 //  Distributed under the Boost Software License, Version 1.0. (See accompanying
 //  file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
+// hpxinspect:nodeprecatedinclude:boost/format.hpp
+// hpxinspect:nodeprecatedname:boost::format
+
 #include "htts2.hpp"
-#include <hpx/util/format.hpp>
+
+#include <boost/format.hpp>
 
 #include <qthread/qthread.h>
 #include <qthread/qloop.h>
@@ -82,12 +86,14 @@ struct qthreads_driver : htts2::driver
                 << "Total Walltime [nanoseconds]"
                 << "\n";
 
-        hpx::util::format_to(std::cout, "{},{},{},{:.14g}\n",
-            this->osthreads_,
-            this->tasks_,
-            this->payload_duration_,
-            results
-        );
+        std::cout
+            << ( boost::format("%lu,%lu,%lu,%.14g\n")
+               % this->osthreads_
+               % this->tasks_
+               % this->payload_duration_
+               % results
+               )
+            ;
     }
 };
 
